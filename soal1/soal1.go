@@ -42,7 +42,7 @@ func getJumlahHari(bln, thn int, jmlHari *int){
 			*jmlHari = 30
 		} else if bln == 10 {
 			*jmlHari = 31
-		} else if bln == 1 {
+		} else if bln == 11 {
 			*jmlHari = 30
 		} else if bln == 12 {
 			*jmlHari = 31
@@ -68,7 +68,7 @@ func getJumlahHari(bln, thn int, jmlHari *int){
 			*jmlHari = 30
 		} else if bln == 10 {
 			*jmlHari = 31
-		} else if bln == 1 {
+		} else if bln == 11 {
 			*jmlHari = 30
 		} else if bln == 12 {
 			*jmlHari = 31
@@ -90,13 +90,13 @@ func valid(tgl, bln, thn int) bool {
 
 func hitungTanggalKembali(tgl,bln,thn int, tglHasil, blnHasil, thnHasil *int){
 	var jmlHari int
-	var tglkembali, blnKembali, thnKembali int
+	var tglKembali, blnKembali, thnKembali int
 
-	tglkembali = tgl + 3
+	tglKembali = tgl + 3
 	getJumlahHari(bln,thn, &jmlHari)
 
-	if tglkembali > jmlHari {
-		*tglHasil = tglkembali % jmlHari
+	if tglKembali > jmlHari {
+		*tglHasil = tglKembali % jmlHari
 		blnKembali = bln + 1
 		if blnKembali > 12 {
 			*blnHasil = blnKembali % 12
@@ -106,8 +106,8 @@ func hitungTanggalKembali(tgl,bln,thn int, tglHasil, blnHasil, thnHasil *int){
 			*blnHasil = blnKembali
 			*thnHasil = thn
 		}
-	} else if tglkembali <= jmlHari {
-		*tglHasil = tglkembali
+	} else if tglKembali <= jmlHari {
+		*tglHasil = tglKembali
 		*blnHasil = bln
 		*thnHasil = thn
 	}

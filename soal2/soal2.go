@@ -48,7 +48,7 @@ func main() {
 		mengemasBaju(modal, &totalUang, &totalPengluaran)
 	}
 	mendistribusikan(modal, &totalUang, &totalPemasukan, &totalPengluaran)
-	fmt.Println(int(totalPengluaran))
-	fmt.Println(int(totalPemasukan))
-	fmt.Println(int(totalUang))
+	fmt.Printf("%.0f",totalPengluaran)
+	fmt.Printf("%.0f",totalPemasukan)
+	fmt.Printf("%.0f",totalUang)
 }
